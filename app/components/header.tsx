@@ -4,7 +4,7 @@ import { HeaderButton } from "./header-button"
 export const Header = () => {
     return(
         <div className="flex flex-row justify-between h-[60px] max-w-[1200px] items-center mx-auto pt-2 px-9">
-            <div>
+            <div className="cursor-pointer">
                 <Image src="/D.jpg" alt="logo" height={105} width={105}/>
             </div>
             <div className="flex flex-row space-x-11">

@@ -4,9 +4,9 @@ import { CiTwitter } from "react-icons/ci";
 
 export const Footer = () => {
     return (
-        <div className="bg-gray-800 h-[140px] w-full mt-[170px]">
+        <div className="bg-gray-800 h-[140px] w-full mt-[160px]">
             <div className="flex flex-col mx-auto px-9 text-center pt-3 bottom-0">
-                <h2 className="text-3xl font-extrabold font-serif text-white">
+                <h2 className="text-2xl font-extrabold font-serif text-white">
                     Dina
                 </h2>
                 <div className="flex flex-row items-center justify-center mt-5 z-10">
