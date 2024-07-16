@@ -10,6 +10,7 @@ export const MainPage = () => {
         "Soon to be runner",
         "Sugar Addict",
         "AIA Scammer Agent",
+        "Endod",
     ];
     return (
         <div className="flex flex-col h-full max-w-[1200px] mx-auto lg:pt-[130px] pt-[50px] relative px-9">
