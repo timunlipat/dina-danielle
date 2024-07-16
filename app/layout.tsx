@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ fontFamily: 'Fantasy, sans-serif'}} >{children}</body>
+      <body className={inter.className} style={{ fontFamily: 'courier, sans-serif'}} >{children}</body>
     </html>
   );
 }
