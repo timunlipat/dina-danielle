@@ -4,7 +4,7 @@ import { MainPage } from "./components/main-page";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-pink-600 via-pink-400 to-red-300 h-screen">
+    <div className="bg-gradient-to-r from-pink-200 via-red-200 to-pink-200 h-screen">
         <Header />
         <MainPage/>
         <Footer/>
