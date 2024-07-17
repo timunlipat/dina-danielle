@@ -19,12 +19,15 @@ export const MainPage = () => {
                 </span> 
             </h1>
             <FlipWords words={words} className="lg:text-6xl text-5xl font-bold mt-9 tracking-tight italic"/>
-            <Button className="w-[150px] rounded-full mt-20 z-10">
+            <Button className="rounded-full absolute w-[150px] lg:relative lg:mt-[180px] z-10 bottom-[140px]">
                 Contact
             </Button>
-            <Image src="/icon.png" alt="cinnamoroll" height={370} width={370}
-                className="absolute right-0 md:top-20 bottom-0"
+            <Image src="/icon.png" alt="cinnamoroll" height={390} width={390}
+                className="absolute right-20 md:top-20 bottom-0 sm:block hidden"
             />
+            <Image src="/c3.gif" alt="gif" height={150} width={150} unoptimized className="absolute top-[-40px] lg:right-[-120px] right-0"/>
+            <Image src="/c1.gif" alt="gif" height={150} width={150} unoptimized className="absolute lg:left-[-120px] left-0 bottom-5"/>
+            <Image src="/c4.gif" alt="gif" height={150} width={150} unoptimized className="absolute lg:right-[-120px] right-0 bottom-5"/>
         </div>
     )
 }
