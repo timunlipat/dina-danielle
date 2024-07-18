@@ -18,9 +18,6 @@ const config = {
       },
     },
     extend: {
-      backgroundImage: {
-        'gradient': 'linear-gradient(to right, #ff7e5f, #feb47b)',
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
