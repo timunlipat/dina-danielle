@@ -5,10 +5,10 @@ type Props = {
     className?: string;
     // onclick: ()=>void;
 }
-export const HeaderButton = ( { title, className }: Props ) => {
+export const HeaderButton = ({ title, className }: Props) => {
     return (
         <div>
-        <h1 className={cn("text-lg font-medium cursor-pointer relative group p-[4px] w-20 text-center",className)}>
+        <h1 className={cn("text-lg font-medium cursor-pointer relative group px-1 text-center",className)}>
             <span className="relative z-10 transition-colors duration-100 group-hover:text-white">
                 {title}
             </span>

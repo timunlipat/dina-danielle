@@ -4,7 +4,7 @@ import { MobileMenu } from "./ui/sheet"
 
 export const Header = () => {
     return(
-        <div className="flex flex-row justify-between h-[80px] items-center pt-2 relative z-20">
+        <div className="flex flex-row justify-between max-w-[1100px] mx-auto h-[80px] items-center pt-2 relative z-20">
             <div className="cursor-pointer">
                 <Image src="/logo.png" alt="person" height={140} width={140} />
             </div>
@@ -17,7 +17,6 @@ export const Header = () => {
             <div className="md:hidden flex">
                 <MobileMenu/>
             </div>
-            
         </div>
     )
 } 
