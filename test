@@ -1,0 +1,5 @@
+assets =  [ global.css, images, svgs ]
+components =  [ FormInput.js, Button.js, Dropdown.js, Modal.js, Navbar.js ] 
+data = [ constant, variables ]
+pages = [ 'For Each individual page on your screen' ]
+

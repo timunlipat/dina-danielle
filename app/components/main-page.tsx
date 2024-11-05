@@ -12,10 +12,10 @@ export const MainPage = () => {
     return (
         <div className="flex flex-col h-[77vh] max-w-[1100px] mx-auto relative px-9">
             <h1 className="md:text-6xl font-bold text-5xl tracking-tight pt-[90px] z-10">
-                Hi, 
+                Hi,
                 <span className="block mt-6">
                 I&apos;m <span className="text-red-700">Dina</span>
-                </span> 
+                </span>
             </h1>
             <FlipWords words={words} className="lg:text-5xl text-4xl font-semibold mt-6 tracking-tight h-[100px]"/>
             <Button className="rounded-3xl w-[150px] relative z-10">
