@@ -13,28 +13,8 @@ const SnakeGame = () => {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [isPaused, setIsPaused] = useState(true);
-    const [isMuted, setIsMuted] = useState(false);
     const lastRenderTimeRef = useRef(0);
     const animationFrameRef = useRef();
-
-    // Audio setup
-    const eatSound = useRef(
-        new Audio(
-            'data:audio/wav;base64,UklGRlwJAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YTgJAACBgIF/gn6Df4B+gn2EfYZ7iHmKeYd8gYJ6knSOq3luqEpN0R8Avy4/ml73kPq4QaeLTVrffzNu0sfp093RyMLHyNDU1NnU1tPR0s/NzcrIxsXGxsfIycjLzc3QztPQ1dPY1t3Y4trl3+ri8OX16Pzr//P//v///fr8+Pv3+/r7+v37/f3//v////////////////////////////////////////////////////////////////////////////////////8AAA=='
-        )
-    );
-    const gameOverSound = useRef(
-        new Audio(
-            'data:audio/wav;base64,UklGRmwJAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YUgJAACBf4N+f4N7g3mLeYSBeoN+gIR6iXqBh3yEgn5/hHyEfIJ/gIGAfoJ/gH6CfYV8h3qKeYd8goF7kHaNrHxvq0hK0BwAvC8+nGD4kvu4QqeLTlrdgDJs0sjp093RyMLHyNDU1NnU1tPR0s/NzcrIxsXGxsfIycjLzc3QztPQ1dPY1t3Y4trl3+ri8OX16Pzr//P//v///fr8+Pv3+/r7+v37/f3//v////////////////////////////////////////////////////////////////////////////////////8AAA=='
-        )
-    );
-
-    const playSound = audio => {
-        if (!isMuted) {
-            audio.current.currentTime = 0;
-            audio.current.play().catch(() => {});
-        }
-    };
 
     const generateFood = useCallback(() => {
         const newFood = {
@@ -100,7 +80,6 @@ const SnakeGame = () => {
                     if (checkCollision(head)) {
                         setGameOver(true);
                         setHighScore(Math.max(score, highScore));
-                        playSound(gameOverSound);
                         return;
                     }
 
@@ -108,7 +87,6 @@ const SnakeGame = () => {
                     if (head.x === food.x && head.y === food.y) {
                         setScore(score + 10);
                         generateFood();
-                        playSound(eatSound);
                     } else {
                         newSnake.pop();
                     }
@@ -127,7 +105,6 @@ const SnakeGame = () => {
             score,
             highScore,
             generateFood,
-            isMuted,
         ]
     );
 
@@ -176,19 +153,11 @@ const SnakeGame = () => {
                     <span className='text-2xl font-bold text-white tracking-wider'>
                         Snake Game
                     </span>
-                    <div className='flex items-center gap-4'>
-                        <button
-                            className='p-2 text-white hover:text-purple-300 transition-colors'
-                            onClick={() => setIsMuted(!isMuted)}
-                        >
-                            {isMuted ? '🔇' : '🔊'}
-                        </button>
-                        <div className='flex items-center gap-2'>
-                            <span className='text-yellow-500'>🏆</span>
-                            <span className='text-white'>
-                                High Score: {highScore}
-                            </span>
-                        </div>
+                    <div className='flex items-center gap-2'>
+                        <span className='text-yellow-500'>🏆</span>
+                        <span className='text-white'>
+                            High Score: {highScore}
+                        </span>
                     </div>
                 </div>
             </div>
