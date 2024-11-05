@@ -223,7 +223,7 @@ const SnakeGame = () => {
                 <div className='p-4 border-b-2 border-purple-500 bg-[#2D1B4E]'>
                     <div className='flex justify-between items-center'>
                         <span className='text-xl md:text-2xl font-bold text-white tracking-wider'>
-                            Ayang Masam
+                            Game Ayang Masam
                         </span>
                         <div className='flex items-center gap-2'>
                             <span className='text-yellow-500'>🏆</span>
@@ -290,9 +290,9 @@ const SnakeGame = () => {
                         </div>
 
                         {/* Mobile controls */}
-                        <div className='md:hidden w-[200px] mt-4'>
+                        <div className='md:hidden w-[280px] mt-4'>
                             {/* Top row with up arrow */}
-                            <div className='flex justify-center mb-2'>
+                            <div className='flex justify-center mb-4'>
                                 <button
                                     onClick={() => {
                                         if (direction !== 'DOWN') {
@@ -301,14 +301,14 @@ const SnakeGame = () => {
                                                 setIsPaused(false);
                                         }
                                     }}
-                                    className='p-3 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-16'
+                                    className='p-6 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-20 text-2xl'
                                 >
                                     ⬆️
                                 </button>
                             </div>
 
                             {/* Bottom row with left, down, right arrows */}
-                            <div className='flex justify-center gap-2'>
+                            <div className='flex justify-center gap-4'>
                                 <button
                                     onClick={() => {
                                         if (direction !== 'RIGHT') {
@@ -317,7 +317,7 @@ const SnakeGame = () => {
                                                 setIsPaused(false);
                                         }
                                     }}
-                                    className='p-3 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-16'
+                                    className='p-6 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-20 text-2xl'
                                 >
                                     ⬅️
                                 </button>
@@ -329,7 +329,7 @@ const SnakeGame = () => {
                                                 setIsPaused(false);
                                         }
                                     }}
-                                    className='p-3 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-16'
+                                    className='p-6 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-20 text-2xl'
                                 >
                                     ⬇️
                                 </button>
@@ -341,7 +341,7 @@ const SnakeGame = () => {
                                                 setIsPaused(false);
                                         }
                                     }}
-                                    className='p-3 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-16'
+                                    className='p-6 bg-purple-700 text-white hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-colors shadow-lg hover:shadow-purple-500/20 active:transform active:scale-95 w-20 text-2xl'
                                 >
                                     ➡️
                                 </button>
