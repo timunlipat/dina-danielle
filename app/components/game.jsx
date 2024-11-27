@@ -223,7 +223,7 @@ const SnakeGame = () => {
                 <div className='p-4 border-b-2 border-purple-500 bg-[#2D1B4E]'>
                     <div className='flex justify-between items-center'>
                         <span className='text-xl md:text-2xl font-bold text-white tracking-wider'>
-                            Game Ayang Masam
+                            Snake Game
                         </span>
                         <div className='flex items-center gap-2'>
                             <span className='text-yellow-500'>🏆</span>
